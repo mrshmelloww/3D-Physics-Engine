@@ -73,11 +73,11 @@ struct Body {
 };
 
 struct PerpendicularOrbiter {
-    float radius;           // Distance from sun
-    float orbitalPeriod;    // How long one orbit takes
-    float currentAngle;     // Current position (0-2π)
-    float angleVelocity;    // How fast it moves
-    float tiltAngle;        // How much it's tilted from the main plane
+    float radius;          
+    float orbitalPeriod;   
+    float currentAngle;    
+    float angleVelocity;    
+    float tiltAngle;        
     vec3d color;
     float bodyRadius;
     std::string name;
@@ -89,10 +89,9 @@ struct PerpendicularOrbiter {
     }
     
     vec3d getCurrentPosition() const {
-        // Calculate position in tilted orbital plane
         float x = radius * cosf(currentAngle);
-        float y = radius * sinf(currentAngle) * cosf(tiltAngle);  // Projected onto main plane
-        float z = radius * sinf(currentAngle) * sinf(tiltAngle);  // Perpendicular component
+        float y = radius * sinf(currentAngle) * cosf(tiltAngle);  
+        float z = radius * sinf(currentAngle) * sinf(tiltAngle);  
         return vec3d(x, y, z);
     }
     
@@ -105,11 +104,11 @@ struct PerpendicularOrbiter {
 };
 
 struct OrbitParams {
-    float semiMajorAxis;    // Average distance from sun
-    float eccentricity;     // How elliptical (0 = circle, 0.9 = very elliptical)
-    float orbitalPeriod;    // How long one orbit takes
-    float currentAngle;     // Current position in orbit (0-2π)
-    float angleVelocity;    // How fast it moves around orbit
+    float semiMajorAxis;    
+    float eccentricity;    
+    float orbitalPeriod;   
+    float currentAngle;     
+    float angleVelocity;   
     vec3d color;
     float radius;
     std::string name;
@@ -118,11 +117,11 @@ struct OrbitParams {
 // Supernova system
 enum SupernovaState {
     NORMAL,
-    PRIMING,      // Planets start glowing intensely
-    EXPLODING,    // Massive explosions
-    WHITE_FLASH,  // Screen goes white
-    FADING,       // White fades to black
-    ENDING        // Nothing left, program closes
+    PRIMING,      
+    EXPLODING,    
+    WHITE_FLASH,  
+    FADING,       
+    ENDING        
 };
 
 struct SupernovaData {
