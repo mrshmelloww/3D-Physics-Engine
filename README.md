@@ -212,7 +212,6 @@ This simulation serves as an excellent learning tool for:
 For questions, suggestions, or collaboration opportunities:
 
 - **Email**: akiradev02@icloud.com
-- **LinkedIn**: https://www.linkedin.com/in/odai-alqahwaji-2bbb50304
 
 ---
 
